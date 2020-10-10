@@ -9,6 +9,7 @@ import AboutSection7 from './AboutSection7'
 import AboutSection8 from './AboutSection8'
 import AboutSection9 from './AboutSection9'
 import AboutSection10 from './AboutSection10'
+import AboutSection11 from './AboutSection11'
 
 const About = () => {
   return (
@@ -23,6 +24,7 @@ const About = () => {
       <AboutSection8 />
       <AboutSection9 />
       <AboutSection10 />
+      <AboutSection11 />
     </div>
   )
 }

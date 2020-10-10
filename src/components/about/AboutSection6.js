@@ -77,7 +77,7 @@ const AboutSection6 = () => {
           <img
             className={classes.productImage}
             src="images/product1.svg"
-            alt="winner-babcock"
+            alt="market-place"
           />
         </Box>
         <Box>
@@ -89,7 +89,7 @@ const AboutSection6 = () => {
           <img
             className={classes.productImage}
             src="images/product2.svg"
-            alt="winner-babcock"
+            alt="service-hub"
           />
         </Box>
         <Box>
@@ -101,7 +101,7 @@ const AboutSection6 = () => {
           <img
             className={classes.productImage}
             src="images/product3.svg"
-            alt="winner-babcock"
+            alt="seller-centre"
           />
         </Box>
         <Box>
@@ -113,7 +113,7 @@ const AboutSection6 = () => {
           <img
             className={classes.productImage}
             src="images/product4.svg"
-            alt="winner-babcock"
+            alt="wholesale-centre"
           />
         </Box>
         <Box>
@@ -124,8 +124,8 @@ const AboutSection6 = () => {
           <Box className={classes.mask} />
           <img
             className={classes.productImage}
-            src="images/product5.svg"
-            alt="winner-babcock"
+            src="images/product5.png"
+            alt="magazine"
           />
         </Box>
         <Box>
@@ -136,8 +136,8 @@ const AboutSection6 = () => {
           <Box className={classes.mask} />
           <img
             className={classes.productImage}
-            src="images/product6.svg"
-            alt="winner-babcock"
+            src="images/product6.png"
+            alt="events"
           />
         </Box>
         <Box>
@@ -149,8 +149,8 @@ const AboutSection6 = () => {
           <Box className={classes.mask} />
           <img
             className={classes.productImage}
-            src="images/product7.png"
-            alt="winner-babcock"
+            src="images/product7.svg"
+            alt="internship-programme"
           />
         </Box>
       </Box>

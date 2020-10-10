@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   },
   container: {
     paddingLeft: "2rem",
-    marginBottom: "2rem",
+    marginBottom: "4rem",
     display: "flex",
     textAlign: "center",
     alignItems: "center",

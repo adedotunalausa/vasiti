@@ -3,14 +3,17 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     fontSize: "2rem",
     fontWeight: 600,
     paddingTop: "2rem",
+    [theme.breakpoints.up('sm')]: {
+      textAlign: "center",
+    }
   },
   details: {
     fontSize: "1rem",
@@ -20,13 +23,25 @@ const useStyles = makeStyles({
     textAlign: "left",
     fontWeight: 400,
     lineHeight: "1.8rem",
+    [theme.breakpoints.up('sm')]: {
+      textAlign: "center",
+      paddingRight: 0,
+    }
   },
   container: {
     paddingLeft: "2rem",
     marginBottom: "4rem",
     display: "flex",
     justifyContent: "flexStart",
-    flexDirection: "column"
+    flexDirection: "column",
+    [theme.breakpoints.up('sm')]: {
+      paddingRight: "2rem",
+    }
+  },
+  mapBoxContainer: {
+    [theme.breakpoints.up('sm')]: {
+      margin: "0 auto",
+    }
   },
   mapBox: {
     width: "310px",
@@ -42,13 +57,16 @@ const useStyles = makeStyles({
   contact: {
     marginBottom: "1rem",
     fontWeight: 500,
+    [theme.breakpoints.up('sm')]: {
+      textAlign: "center",
+    }
   },
   address: {
     fontWeight: 600,
     fontSize: "1.2rem",
     marginLeft: "1rem",
   }
-})
+}));
 
 const AboutSection11 = () => {
   const classes = useStyles()
@@ -71,7 +89,7 @@ const AboutSection11 = () => {
             contact@vasiti.com
           </Typography>
         </Box>
-        <Box>
+        <Box className={classes.mapBoxContainer}>
           <Box className={classes.mapBox}>
             <Box>
               <img

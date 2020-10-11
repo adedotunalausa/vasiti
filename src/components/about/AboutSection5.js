@@ -3,15 +3,18 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     fontSize: "2rem",
     fontWeight: 600,
     paddingTop: "4rem",
     padding: "1.6rem",
+    [theme.breakpoints.up('sm')]: {
+      textAlign: "center",
+    }
   },
   container: {
     marginBottom: "2rem",
@@ -22,12 +25,23 @@ const useStyles = makeStyles({
     marginTop: "2rem",
     width: "5rem",
   },
+  infoBoxContainer: {
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    marginTop: "1rem",
+    justifyContent: "center",
+    [theme.breakpoints.up('sm')]: {
+      flexDirection: "row",
+      paddingRight: "2rem",
+    }
+  },
   infoBox: {
     display: "flex",
     justifyContent: "flexStart",
     flexDirection: "column",
     marginLeft: "2rem",
-    marginTop: "4rem",
+    marginBottom: "4rem",
     paddingLeft: "1.5rem",
     paddingTop: "1.5rem",
     border: "1px solid #EAEAEA",
@@ -49,7 +63,7 @@ const useStyles = makeStyles({
     fontWeight: 400,
     lineHeight: "1.8rem",
   }
-})
+}));
 
 const AboutSection5 = () => {
   const classes = useStyles()
@@ -60,53 +74,55 @@ const AboutSection5 = () => {
         <Typography className={classes.header} variant="h1">
           Our Core Values
           </Typography>
-        <Box className={classes.infoBox}>
-          <img
-            className={classes.sectionImage}
-            src="images/vector-bag.svg"
-            alt="winner-babcock"
-          />
-          <Typography className={classes.infoHeading} variant="h4">
-            Professionalism
+        <Box className={classes.infoBoxContainer}>
+          <Box className={classes.infoBox}>
+            <img
+              className={classes.sectionImage}
+              src="images/vector-bag.svg"
+              alt="winner-babcock"
+            />
+            <Typography className={classes.infoHeading} variant="h4">
+              Professionalism
           </Typography>
-          <Typography className={classes.info} variant="h6">
-            We are professionals, some short three
-            lines or more about our brand value,
-            which are professionalism, excellence
-            and friendliness
+            <Typography className={classes.info} variant="h6">
+              We are professionals, some short three
+              lines or more about our brand value,
+              which are professionalism, excellence
+              and friendliness
           </Typography>
-        </Box>
-        <Box className={classes.infoBox}>
-          <img
-            className={classes.sectionImage}
-            src="images/vector-thumb.svg"
-            alt="thumbs-up"
-          />
-          <Typography className={classes.infoHeading} variant="h4">
-            Excellence
+          </Box>
+          <Box className={classes.infoBox}>
+            <img
+              className={classes.sectionImage}
+              src="images/vector-thumb.svg"
+              alt="thumbs-up"
+            />
+            <Typography className={classes.infoHeading} variant="h4">
+              Excellence
           </Typography>
-          <Typography className={classes.info} variant="h6">
-            We are professionals, some short three
-            lines or more about our brand value,
-            which are professionalism, excellence
-            and friendliness
+            <Typography className={classes.info} variant="h6">
+              We are professionals, some short three
+              lines or more about our brand value,
+              which are professionalism, excellence
+              and friendliness
           </Typography>
-        </Box>
-        <Box className={classes.infoBox}>
-          <img
-            className={classes.sectionImage}
-            src="images/vector-message.svg"
-            alt="message"
-          />
-          <Typography className={classes.infoHeading} variant="h4">
-            Friendliness
+          </Box>
+          <Box className={classes.infoBox} style={{ marginBottom: 0 }}>
+            <img
+              className={classes.sectionImage}
+              src="images/vector-message.svg"
+              alt="message"
+            />
+            <Typography className={classes.infoHeading} variant="h4">
+              Friendliness
           </Typography>
-          <Typography className={classes.info} variant="h6">
-            We are professionals, some short three
-            lines or more about our brand value,
-            which are professionalism, excellence
-            and friendliness
+            <Typography className={classes.info} variant="h6">
+              We are professionals, some short three
+              lines or more about our brand value,
+              which are professionalism, excellence
+              and friendliness
           </Typography>
+          </Box>
         </Box>
       </Box>
     </div>

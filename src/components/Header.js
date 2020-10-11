@@ -26,8 +26,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between"
   },
   title: {
-    // paddingTop: "1.2rem",
-    // paddingBottom: "1.2rem",
     width: "7rem"
   },
   menuItems1Box: {

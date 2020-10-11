@@ -3,10 +3,10 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     fontSize: "2rem",
     fontWeight: 600,
@@ -20,15 +20,22 @@ const useStyles = makeStyles({
     textAlign: "left",
     fontWeight: 400,
     lineHeight: "1.8rem",
+    [theme.breakpoints.up('sm')]: {
+      paddingRight: "2rem",
+    }
   },
   container: {
     paddingLeft: "2rem",
     marginBottom: "2rem",
     display: "flex",
     justifyContent: "flexStart",
-    flexDirection: "column"
+    flexDirection: "column",
+    [theme.breakpoints.up('sm')]: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }
   },
-})
+}));
 
 const AboutSection8 = () => {
   const classes = useStyles()

@@ -5,15 +5,18 @@ import {
   TextField,
   Button,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     fontSize: "2.3rem",
     fontWeight: 600,
     paddingTop: "2rem",
     color: "#ffffff",
+    [theme.breakpoints.up('sm')]: {
+      textAlign: "center",
+    },
   },
   details: {
     fontSize: "1rem",
@@ -24,6 +27,10 @@ const useStyles = makeStyles({
     fontWeight: 400,
     lineHeight: "1.8rem",
     color: "#ffffff",
+    [theme.breakpoints.up('sm')]: {
+      textAlign: "center",
+      paddingRight: 0,
+    },
   },
   container: {
     paddingLeft: "1.5rem",
@@ -32,11 +39,19 @@ const useStyles = makeStyles({
     justifyContent: "flexStart",
     flexDirection: "column",
     background: "#25201D",
+    [theme.breakpoints.up('sm')]: {
+      paddingRight: "1.5rem",
+    }
   },
   form: {
     '& > *': {
       marginBottom: "3rem",
       width: "20rem",
+      borderRadius: "8px",
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: "10rem",
+        width: "25rem",
+      }
     },
   },
   textInput: {
@@ -52,11 +67,17 @@ const useStyles = makeStyles({
     marginTop: "0.3rem",
     width: "7rem",
     height: "2.5rem",
-    color: "##242120",
+    color: "#242120",
+    [theme.breakpoints.up('sm')]: {
+      marginRight: "7.2rem",
+    }
   },
   banner: {
     width: "22rem",
     marginBottom: "2rem",
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: "12rem",
+    }
   },
   footerLinks: {
     fontSize: "0.9rem",
@@ -66,8 +87,20 @@ const useStyles = makeStyles({
   linkContainer: {
     display: "flex",
     flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "center",
+    [theme.breakpoints.up('sm')]: {
+      justifyContent: "space-between",
+      marginRight: "1.5rem",
+    },
+  },
+  linkBox1: {
+    marginRight: "7rem",
+    [theme.breakpoints.up('sm')]: {
+      marginRight: "3rem",
+    }
   }
-})
+}));
 
 const AboutSection12 = () => {
   const classes = useStyles()
@@ -90,7 +123,7 @@ const AboutSection12 = () => {
               className={classes.textInput}
               id="outlined-secondary"
               label="Enter your email address"
-              variant="outlined"
+              variant="filled"
               color="secondary"
             />
             <Button className={classes.button} variant="contained">SUBSCRIBE</Button>
@@ -104,7 +137,7 @@ const AboutSection12 = () => {
           />
         </Box>
         <Box className={classes.linkContainer}>
-          <Box style={{ marginRight: "7rem" }}>
+          <Box className={classes.linkBox1}>
             <Typography
               className={classes.header}
               style={{ fontSize: "1.1rem", marginBottom: "1.5rem" }}

@@ -3,14 +3,17 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     fontSize: "2rem",
     fontWeight: 600,
     paddingTop: "2rem",
+    [theme.breakpoints.up('sm')]: {
+      paddingTop: "1rem"
+    }
   },
   details: {
     fontSize: "1rem",
@@ -26,16 +29,25 @@ const useStyles = makeStyles({
     paddingBottom: "2rem",
     display: "flex",
     justifyContent: "flexStart",
-    flexDirection: "column"
+    flexDirection: "column",
+    [theme.breakpoints.up('sm')]: {
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }
   },
   logo: {
     marginBottom: "3rem",
+    width: "5rem",
+    marginRight: "2rem",
   },
   logoWrapper: {
     display: "flex",
     flexWrap: "wrap",
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: "2rem",
+    }
   }
-})
+}));
 
 const AboutSection9 = () => {
   const classes = useStyles()
@@ -55,7 +67,6 @@ const AboutSection9 = () => {
         <Box className={classes.logoWrapper}>
           <img
             className={classes.logo}
-            style={{ marginRight: "2rem" }}
             src="images/forbes.svg"
             alt="event1"
           />
@@ -66,18 +77,11 @@ const AboutSection9 = () => {
           />
           <img
             className={classes.logo}
-            style={{ marginRight: "2rem" }}
-            src="images/net.svg"
-            alt="event1"
-          />
-          <img
-            className={classes.logo}
             src="images/sme-speaks.svg"
             alt="event1"
           />
           <img
             className={classes.logo}
-            style={{ marginRight: "2rem" }}
             src="images/bella-naija.svg"
             alt="event1"
           />
@@ -88,7 +92,6 @@ const AboutSection9 = () => {
           />
           <img
             className={classes.logo}
-            style={{ marginRight: "2rem" }}
             src="images/tech-next.svg"
             alt="event1"
           />
@@ -99,7 +102,6 @@ const AboutSection9 = () => {
           />
           <img
             className={classes.logo}
-            style={{ marginRight: "2rem" }}
             src="images/tech-cabal.svg"
             alt="event1"
           />
@@ -110,7 +112,11 @@ const AboutSection9 = () => {
           />
           <img
             className={classes.logo}
-            style={{ marginRight: "2rem" }}
+            src="images/net.svg"
+            alt="event1"
+          />
+          <img
+            className={classes.logo}
             src="images/tribune.svg"
             alt="event1"
           />

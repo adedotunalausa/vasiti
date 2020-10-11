@@ -3,10 +3,10 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   header: {
     fontSize: "2rem",
     color: "#FF5C01",
@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     padding: "1.6rem",
   },
   details: {
+    color: "#636363",
     fontSize: "1rem",
     paddingTop: 0,
     padding: "2rem",
@@ -27,13 +28,17 @@ const useStyles = makeStyles({
     marginBottom: "3rem",
     display: "flex",
     alignItems: "center",
-    flexDirection: "column"
+    flexDirection: "column",
+    [theme.breakpoints.up('sm')]: {
+      flexDirection: "row",
+      paddingRight: "2rem",
+    }
   },
   sectionImage: {
     marginTop: "0.6rem",
     width: "23rem",
   },
-})
+}));
 
 const Section1 = () => {
   const classes = useStyles()

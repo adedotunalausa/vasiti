@@ -3,16 +3,31 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles((theme) => ({
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1240,
+      xl: 1920,
+    },
+  },
+});
+
+const useStyles = makeStyles(() => ({
   header: {
-    fontSize: "2rem",
+    fontSize: "1.6rem",
     fontWeight: 600,
     paddingTop: "5rem",
     marginBottom: "4rem",
     marginRight: "2rem",
+    [theme.breakpoints.up('lg')]: {
+      fontSize: "2rem",
+    },
   },
   details: {
     fontSize: "1.2rem",
@@ -23,12 +38,16 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "1.8rem",
     [theme.breakpoints.up('sm')]: {
       width: "35rem",
-    }
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: "1.4rem",
+      width: "39rem",
+      lineHeight: "2.1rem",
+    },
   },
   container: {
     paddingLeft: "2rem",
-    paddingBottom: "5rem",
-    marginBottom: "4rem",
+    paddingBottom: "9rem",
     display: "flex",
     textAlign: "center",
     alignItems: "center",

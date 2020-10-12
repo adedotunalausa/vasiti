@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme, createMuiTheme } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -14,16 +14,40 @@ import MenuIcon from '@material-ui/icons/Menu';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { withRouter } from 'react-router-dom'
 
-const useStyles = makeStyles((theme) => ({
+//CSS Styles
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1240,
+      xl: 1920,
+    },
+  },
+})
+
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
+  },
+  appBar: {
+    background: "#ffffff",
+    [theme.breakpoints.up('md')]: {
+      paddingRight: "3.5rem",
+      paddingLeft: "3.5rem"
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingRight: "5.5rem",
+      paddingLeft: "5.5rem",
+    }
   },
   menuButton: {
     marginRight: theme.spacing(1),
   },
   toolbar: {
     display: "flex",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
   },
   title: {
     width: "7rem"
@@ -38,12 +62,28 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "0.5rem",
       marginRight: "0.8rem",
       marginLeft: "0.8rem",
-    }
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: "0.7rem",
+      marginRight: "1rem",
+      marginLeft: "1rem",
+    },
   },
   menuItems2: {
     [theme.breakpoints.up('sm')]: {
       fontSize: "0.5rem",
-    }
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: "0.6rem",
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: "0.7rem",
+      marginRight: "0.6rem",
+      marginLeft: "0.6rem",
+    },
   },
   signUp: {
     fontSize: "0.5rem",
@@ -80,7 +120,7 @@ const menuItems1 = [
 ]
 const menuItems2 = [
   {
-    page: "ABOUT",
+    page: "ABOUT US",
     pageUrl: "/about"
   },
   {
@@ -116,7 +156,7 @@ const Header = props => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: "#ffffff" }}>
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar className={classes.toolbar}>
           <img onClick={() => handleMenuClick('/')} className={classes.title} src="images/vasiti-logo.svg" alt="vasiti-logo" />
           <div>

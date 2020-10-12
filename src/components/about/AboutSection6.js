@@ -3,10 +3,29 @@ import {
   Typography,
   Box,
 } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles'
 
 // CSS Styles
-const useStyles = makeStyles((theme) => ({
+const theme = createMuiTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1240,
+      xl: 1920,
+    },
+  },
+});
+
+const useStyles = makeStyles(() => ({
+  backgroundContainer: {
+    background: "#ffffff",
+  },
+  mainContainer: {
+    maxWidth: "1440px",
+    margin: "0 auto",
+  },
   header: {
     fontSize: "2rem",
     fontWeight: 600,
@@ -27,13 +46,24 @@ const useStyles = makeStyles((theme) => ({
       textAlign: "center",
       paddingRight: 0,
     },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: "1.125rem",
+    },
   },
   container: {
     paddingLeft: "2rem",
-    marginBottom: "2rem",
+    paddingBottom: "2rem",
     display: "flex",
     justifyContent: "flexStart",
-    flexDirection: "column"
+    flexDirection: "column",
+    [theme.breakpoints.up('md')]: {
+      paddingRight: "5rem",
+      paddingLeft: "5rem",
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingRight: "7rem",
+      paddingLeft: "7rem",
+    },
   },
   productContainer: {
     display: "flex",
@@ -42,6 +72,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     [theme.breakpoints.up('sm')]: {
+      paddingLeft: "2rem",
       flexDirection: "row",
     }
   },
@@ -76,101 +107,105 @@ const AboutSection6 = () => {
 
   return (
     <div>
-      <Box className={classes.container}>
-        <Box>
-          <Typography className={classes.header} variant="h1">
-            Our Products
+      <Box className={classes.backgroundContainer}>
+        <Box className={classes.mainContainer}>
+          <Box className={classes.container}>
+            <Box>
+              <Typography className={classes.header} variant="h1">
+                Our Products
           </Typography>
-          <Typography className={classes.details} variant="h6">
-            We’ve built world-class technology products with an amazing user
-            experience
+              <Typography className={classes.details} variant="h6">
+                We’ve built world-class technology products with an amazing user
+                experience
           </Typography>
-        </Box>
-        <Box className={classes.productContainer}>
-          <Box>
-            <Typography className={classes.productName} variant="h6">
-              Vasiti
-              Marketplace
+            </Box>
+            <Box className={classes.productContainer}>
+              <Box>
+                <Typography className={classes.productName} variant="h6">
+                  Vasiti
+                  Marketplace
           </Typography>
-            <Box className={classes.mask} />
-            <img
-              className={classes.productImage}
-              src="images/product1.svg"
-              alt="market-place"
-            />
-          </Box>
-          <Box>
-            <Typography className={classes.productName} variant="h6">
-              Vasiti
-              Service Hub
+                <Box className={classes.mask} />
+                <img
+                  className={classes.productImage}
+                  src="images/product1.svg"
+                  alt="market-place"
+                />
+              </Box>
+              <Box>
+                <Typography className={classes.productName} variant="h6">
+                  Vasiti
+                  Service Hub
           </Typography>
-            <Box className={classes.mask} />
-            <img
-              className={classes.productImage}
-              src="images/product2.svg"
-              alt="service-hub"
-            />
-          </Box>
-          <Box>
-            <Typography className={classes.productName} variant="h6">
-              Vasiti
-              Seller Centre
+                <Box className={classes.mask} />
+                <img
+                  className={classes.productImage}
+                  src="images/product2.svg"
+                  alt="service-hub"
+                />
+              </Box>
+              <Box>
+                <Typography className={classes.productName} variant="h6">
+                  Vasiti
+                  Seller Centre
           </Typography>
-            <Box className={classes.mask} />
-            <img
-              className={classes.productImage}
-              src="images/product3.svg"
-              alt="seller-centre"
-            />
-          </Box>
-          <Box>
-            <Typography className={classes.productName} variant="h6">
-              Vasiti
-              Wholesale Centre
+                <Box className={classes.mask} />
+                <img
+                  className={classes.productImage}
+                  src="images/product3.svg"
+                  alt="seller-centre"
+                />
+              </Box>
+              <Box>
+                <Typography className={classes.productName} variant="h6">
+                  Vasiti
+                  Wholesale Centre
           </Typography>
-            <Box className={classes.mask} />
-            <img
-              className={classes.productImage}
-              src="images/product4.svg"
-              alt="wholesale-centre"
-            />
-          </Box>
-          <Box>
-            <Typography className={classes.productName} variant="h6">
-              Vasiti
-              Magazine
+                <Box className={classes.mask} />
+                <img
+                  className={classes.productImage}
+                  src="images/product4.svg"
+                  alt="wholesale-centre"
+                />
+              </Box>
+              <Box>
+                <Typography className={classes.productName} variant="h6">
+                  Vasiti
+                  Magazine
           </Typography>
-            <Box className={classes.mask} />
-            <img
-              className={classes.productImage}
-              src="images/product5.png"
-              alt="magazine"
-            />
-          </Box>
-          <Box>
-            <Typography className={classes.productName} variant="h6">
-              Vasiti
-              Events
+                <Box className={classes.mask} />
+                <img
+                  className={classes.productImage}
+                  src="images/product5.png"
+                  alt="magazine"
+                />
+              </Box>
+              <Box>
+                <Typography className={classes.productName} variant="h6">
+                  Vasiti
+                  Events
           </Typography>
-            <Box className={classes.mask} />
-            <img
-              className={classes.productImage}
-              src="images/product6.png"
-              alt="events"
-            />
-          </Box>
-          <Box>
-            <Typography className={classes.productName} style={{ marginTop: "2rem" }} variant="h6">
-              Vasiti Virtual
-              Internship
-              Programme (VVIP)
+                <Box className={classes.mask} />
+                <img
+                  className={classes.productImage}
+                  src="images/product6.png"
+                  alt="events"
+                />
+              </Box>
+              <Box>
+                <Typography className={classes.productName} style={{ marginTop: "2rem" }} variant="h6">
+                  Vasiti Virtual
+                  Internship
+                  Programme (VVIP)
           </Typography>
-            <Box className={classes.mask} />
-            <img
-              className={classes.productImage}
-              src="images/product7.svg"
-              alt="internship-programme"
-            />
+                <Box className={classes.mask} />
+                <img
+                  className={classes.productImage}
+                  src="images/product7.svg"
+                  alt="internship-programme"
+                />
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Box>

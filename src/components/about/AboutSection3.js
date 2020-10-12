@@ -86,6 +86,9 @@ const useStyles = makeStyles(() => ({
     marginTop: "2rem",
     width: "19rem",
     borderRadius: "8px",
+    [theme.breakpoints.up('lg')]: {
+      width: "25rem",
+    },
   }
 }));
 

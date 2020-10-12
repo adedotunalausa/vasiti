@@ -13,6 +13,7 @@ const theme = createMuiTheme({
       sm: 600,
       md: 960,
       lg: 1240,
+      slg: 1440,
       xl: 1920,
     },
   },
@@ -65,20 +66,22 @@ const useStyles = makeStyles(() => ({
       flexDirection: "row",
       justifyContent: "space-between",
     },
-    [theme.breakpoints.up('md')]: {
-      flexDirection: "row",
-      justifyContent: "space-around",
-    }
   },
   eventImage: {
     width: "23.5rem",
     marginBottom: "2rem",
-  },
-  [theme.breakpoints.up('sm')]: {
-    width: "22rem",
-  },
-  [theme.breakpoints.up('md')]: {
-    width: "39rem",
+    [theme.breakpoints.up('sm')]: {
+      width: "22rem",
+    },
+    [theme.breakpoints.up('md')]: {
+      width: "31rem",
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: "38rem",
+    },
+    [theme.breakpoints.up('slg')]: {
+      width: "44rem",
+    },
   },
 }));
 

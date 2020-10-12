@@ -33,6 +33,7 @@ const useStyles = makeStyles(() => ({
   },
   appBar: {
     background: "#ffffff",
+    width: "100vw",
     [theme.breakpoints.up('md')]: {
       paddingRight: "3.5rem",
       paddingLeft: "3.5rem"

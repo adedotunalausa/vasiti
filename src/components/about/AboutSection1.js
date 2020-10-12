@@ -61,6 +61,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
+    overflow: "hidden",
     [theme.breakpoints.up('sm')]: {
       flexDirection: "row",
       paddingRight: "2rem",
@@ -80,14 +81,14 @@ const useStyles = makeStyles(() => ({
   sectionImage: {
     marginTop: "0.6rem",
     width: "23rem",
+    [theme.breakpoints.up('lg')]: {
+      width: "30rem",
+    }
   },
-  [theme.breakpoints.up('lg')]: {
-    width: "30rem",
-  }
 }));
 
 const Section1 = () => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <div>

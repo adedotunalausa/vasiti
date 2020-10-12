@@ -58,7 +58,7 @@ const useStyles = makeStyles(() => ({
     },
     [theme.breakpoints.up('lg')]: {
       fontSize: "1.125rem",
-      width: "33rem",
+      width: "35rem",
     },
   },
   container: {
@@ -75,8 +75,7 @@ const useStyles = makeStyles(() => ({
       paddingLeft: "5rem",
     },
     [theme.breakpoints.up('lg')]: {
-      paddingRight: "7rem",
-      paddingLeft: "7rem",
+      padding: "3rem 7rem 2rem 7rem",
       justifyContent: "space-between",
     }
   },
@@ -84,10 +83,10 @@ const useStyles = makeStyles(() => ({
     marginTop: "2rem",
     width: "19rem",
     borderRadius: "8px",
+    [theme.breakpoints.up('lg')]: {
+      width: "25rem",
+    }
   },
-  [theme.breakpoints.up('lg')]: {
-    width: "25rem",
-  }
 }));
 
 const AboutSection2 = () => {

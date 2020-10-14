@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     margin: "0 auto",
   },
   header: {
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: 600,
     paddingTop: "4rem",
     padding: "1.6rem",
@@ -101,16 +101,14 @@ function AboutSection4() {
           <Box className={classes.container}>
             <Box>
               <Typography className={classes.header} variant="h1">
-                We are for student
-                focused businesses
+                We partner with organizations
+                interested in students
           </Typography>
               <Typography className={classes.details} variant="h6">
-                For businesses interested in the
-                student community, Vasiti puts them
-                in front of thousands of students so
-                they can engage better with students
-                and increase awareness for their
-                or products or services.
+                For organizations interested in the student community,
+                Vasiti puts them in front of thousands of students so
+                they can engage better with students and increase
+                awareness for their products or services.
           </Typography>
             </Box>
             <img

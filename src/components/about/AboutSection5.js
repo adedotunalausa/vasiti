@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
   sectionImage: {
     marginTop: "2rem",
-    width: "5rem",
+    width: "4rem",
   },
   infoBoxContainer: {
     display: "flex",
@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
   infoHeading: {
     fontSize: "1.5rem",
     fontWeight: 600,
-    paddingTop: "4rem",
+    paddingTop: "2rem",
   },
   info: {
     color: "#4A4A4A",

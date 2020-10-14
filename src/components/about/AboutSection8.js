@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     margin: "0 auto",
   },
   header: {
-    fontSize: "1.6rem",
+    fontSize: "1.5rem",
     fontWeight: 600,
     paddingTop: "2rem",
     [theme.breakpoints.up('lg')]: {

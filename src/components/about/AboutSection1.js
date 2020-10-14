@@ -97,22 +97,22 @@ const Section1 = () => {
           <Box className={classes.container}>
             <Box>
               <Typography className={classes.header} variant="h1">
-                Empowering Nigerian
-                Student Entrepreneurs
-                & Businesses
+                We Provide The Best
+                E-Commerce Experience
+                & Also Empower Students
+
         </Typography>
               <Typography className={classes.details} variant="h6">
-                Vasiti is a fast-growing brand that
-                builds technology platforms that
-                help student entrepreneurs scale
-                their small businesses into
-                sustainable businesses through
-                selling students products or services
-                easily and gaining all-round support
-                that is needed to scale.
+                Vasiti is a fast-growing brand that builds
+                technology platforms and optimises the e-commerce
+                supply chain to help student entrepreneurs scale
+                their small businesses through selling their
+                products or services easily to a larger market,
+                gaining all-round support needed to scale and
+                delivering optimum value to customers.
         </Typography>
             </Box>
-            <img className={classes.sectionImage} src="images/ejiro-winner.png" alt="winner-babcock" />
+            <img className={classes.sectionImage} src="/images/ejiro-winner.png" alt="winner-babcock" />
           </Box>
         </Box>
       </Box>

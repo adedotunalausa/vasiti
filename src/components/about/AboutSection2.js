@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     margin: "0 auto",
   },
   header: {
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: 600,
     paddingTop: "4rem",
     padding: "1.6rem",
@@ -99,21 +99,26 @@ const AboutSection2 = () => {
           <Box className={classes.container}>
             <Box>
               <Typography className={classes.header} variant="h1">
-                We focus on making
-                students lives easier
+                We are keen on an
+                amazing experience
         </Typography>
               <Typography className={classes.details} variant="h6">
-                In addition to helping student
-                entrepreneurs build businesses,
-                Vasiti helps to make students’
-                lives easier on campus by building
-                platforms that provide on-demand
-                access to their needs and also
-                empowering them through innovative
-                programmes.
+                We ensure all our customers get a
+                fulfilling experience that they
+                can’t get anywhere else. We do
+                this by building world-class
+                technology platforms, offering
+                unbeatable deals and providing
+                excellent customer service. By
+                shopping on Vasiti, you also help
+                to grow a student’s business leading
+                to positive economic impact. For
+                unsatisfactory products or services,
+                returns and refunds are fast and as
+                easy as ABC.
         </Typography>
             </Box>
-            <img className={classes.sectionImage} src="images/lady-writing.png" alt="winner-babcock" />
+            <img className={classes.sectionImage} src="/images/lady-man-laughing.png" alt="winner-babcock" />
           </Box>
         </Box>
       </Box>
